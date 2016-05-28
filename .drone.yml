@@ -11,7 +11,8 @@ build:
     - MAME_EXE=mametiny64.exe
   commands:
     - make
-    - ./$MAME_EXE -validate
+    - ./$MAME_EXE -validate &> out.txt
+    - cat out.txt
     - echo haha1
     - echo haha2
     - echo haha3
